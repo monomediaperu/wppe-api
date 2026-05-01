@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "updated_at": "2026-05-01T00:00:00Z",
+  "domains": [
+    "wp.pe",
+    "*.wp.pe",
+    "mono.media",
+    "*.mono.media",
+    "anden.com.pe",
+    "*.anden.com.pe"
+  ]
+}

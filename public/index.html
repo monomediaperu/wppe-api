@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+	<meta charset="UTF-8">
+	<title>api.wp.pe</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; color: #222; line-height: 1.5; }
+		h1 { font-size: 22px; margin-bottom: 4px; }
+		.muted { color: #666; font-size: 14px; }
+		code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-size: 13px; }
+		table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+		th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #eee; vertical-align: top; }
+		th { background: #fafafa; font-weight: 600; }
+		.tag { display: inline-block; background: #e3f2e6; color: #2e7d32; padding: 2px 8px; border-radius: 10px; font-size: 11px; }
+		footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #eee; font-size: 12px; color: #888; }
+		a { color: #1565c0; }
+	</style>
+</head>
+<body>
+	<h1>api.wp.pe</h1>
+	<p class="muted">Endpoints estaticos publicos de Mono Media para servicios WP.pe.</p>
+
+	<h2>Endpoints disponibles</h2>
+	<table>
+		<thead>
+			<tr><th>Path</th><th>Descripcion</th><th>Cache</th></tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="/bridge/whitelist.json"><code>/bridge/whitelist.json</code></a></td>
+				<td>Whitelist de dominios autorizados para usar el plugin <strong>WP.pe Bridge</strong> sin modo demo. Consumido por el plugin desde v1.1.0.</td>
+				<td>5 min</td>
+			</tr>
+			<tr>
+				<td><a href="/bridge/latest.json"><code>/bridge/latest.json</code></a></td>
+				<td>Manifest con la version latest del plugin <strong>WP.pe Bridge</strong> + URL del zip.</td>
+				<td>5 min</td>
+			</tr>
+			<tr>
+				<td><code>/bridge/releases/wppe-bridge-X.Y.Z.zip</code></td>
+				<td>Mirror publico de los releases del plugin <strong>WP.pe Bridge</strong>. <span class="tag">immutable</span></td>
+				<td>1 ano</td>
+			</tr>
+			<tr>
+				<td><a href="/status/ping.json"><code>/status/ping.json</code></a></td>
+				<td>Health check publico del servicio.</td>
+				<td>no-cache</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2>CORS</h2>
+	<p>Todos los endpoints permiten <code>Access-Control-Allow-Origin: *</code> (acceso desde cualquier dominio).</p>
+
+	<footer>
+		Operado por <a href="https://mono.media" target="_blank" rel="noopener">Mono Media SAC</a> &middot;
+		Codigo en <a href="https://github.com/monomediaperu/wppe-api" target="_blank" rel="noopener">github.com/monomediaperu/wppe-api</a> &middot;
+		Soporte: <a href="mailto:soporte@mono.media">soporte@mono.media</a>
+	</footer>
+</body>
+</html>
