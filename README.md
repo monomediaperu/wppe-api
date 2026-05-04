@@ -53,21 +53,33 @@ Ejemplo:
 
 ### 2. Publicar un release nuevo del plugin
 
-Cuando se publica una versión nueva del plugin (en repo privado `wppe-sperant-bridge`):
+**Automatizado desde 2026-05-01.** El repo privado `wppe-sperant-bridge` tiene un GitHub Action (`.github/workflows/mirror-release.yml`) que cuando hago `gh release create vX.Y.Z` allí, auto-mirroea acá:
 
-1. Subir el zip a `public/bridge/releases/wppe-bridge-X.Y.Z.zip`.
-2. Actualizar `public/bridge/latest.json` con la nueva versión y URL.
-3. Commit + push.
-4. Coolify auto-deploya.
+1. Descarga el zip del release del repo del plugin.
+2. Hace clone de `wppe-api` con un PAT (secret `WPPE_API_PAT`).
+3. Copia el zip a `public/bridge/releases/`.
+4. Actualiza `public/bridge/latest.json`.
+5. Commit + push.
+6. Coolify auto-deploya en ~30-60s.
+
+**Cero pasos manuales** en cada release nuevo.
+
+#### Si necesitás subir un release manualmente (fallback)
 
 ```bash
-# Ejemplo manual (eventualmente automatizado via GitHub Action)
-cp ~/Downloads/wppe-bridge-2.1.0.zip public/bridge/releases/
-# Editar latest.json -> "version": "2.1.0", "zip_url": "..."
+cp ~/Downloads/wppe-bridge-X.Y.Z.zip public/bridge/releases/
+# Editar latest.json -> nueva versión + zip_url
 git add -A
-git commit -m "release: wppe-bridge v2.1.0"
+git commit -m "release: wppe-bridge vX.Y.Z (manual)"
 git push
 ```
+
+#### Si necesitás regenerar el PAT (rotación)
+
+1. GitHub → Settings → Developer settings → Personal access tokens → Fine-grained.
+2. New token con scope `repo` solo en `monomediaperu/wppe-api`.
+3. Permission: `Contents: Read and Write`.
+4. En el repo del plugin → Settings → Secrets and variables → Actions → editar `WPPE_API_PAT` con el nuevo token.
 
 ### 3. Verificar que todo está vivo
 
@@ -119,3 +131,5 @@ Si necesitás invalidar cache de Cloudflare después de un cambio crítico:
 ## Licencia
 
 MIT — los archivos servidos por este endpoint pueden tener licencias propias (los zips del plugin son GPL-3.0-or-later).
+
+<!-- Updated: 2026-05-04T20:35:44Z -->
