@@ -1,9 +1,9 @@
 {
-  "version": "2.5.0",
-  "released_at": "2026-05-06T16:20:09Z",
-  "last_updated": "2026-05-06T16:20:09Z",
-  "zip_url": "https://api.wp.pe/bridge/releases/wppe-bridge-2.5.0.zip",
-  "changelog_url": "https://github.com/monomediaperu/wppe-sperant-bridge/releases/tag/v2.5.0",
+  "version": "2.5.1",
+  "released_at": "2026-05-12T15:01:39Z",
+  "last_updated": "2026-05-12T15:01:39Z",
+  "zip_url": "https://api.wp.pe/bridge/releases/wppe-bridge-2.5.1.zip",
+  "changelog_url": "https://github.com/monomediaperu/wppe-sperant-bridge/releases/tag/v2.5.1",
   "minimum_php": "8.1",
   "minimum_wordpress": "6.4",
   "tested": "6.7"
