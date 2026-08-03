@@ -1,10 +1,10 @@
 {
-  "version": "2.10.2",
-  "released_at": "2026-08-01T14:25:23Z",
-  "last_updated": "2026-08-01T14:25:23Z",
-  "zip_url": "https://api.wp.pe/bridge/releases/wppe-bridge-2.10.2.zip",
-  "sha256": "e6467fbfff9687a335bb69c3e0a6a1b7f0003ff606eea95a53f8461e96551251",
-  "changelog_url": "https://github.com/monomediaperu/wppe-bridge/releases/tag/v2.10.2",
+  "version": "2.11.0",
+  "released_at": "2026-08-03T02:27:04Z",
+  "last_updated": "2026-08-03T02:27:04Z",
+  "zip_url": "https://api.wp.pe/bridge/releases/wppe-bridge-2.11.0.zip",
+  "sha256": "2401d22383399f24031837809592d9da57b0c24073354c0416f7952796011b82",
+  "changelog_url": "https://github.com/monomediaperu/wppe-bridge/releases/tag/v2.11.0",
   "minimum_php": "8.1",
   "minimum_wordpress": "6.4",
   "tested": "7.0"
