@@ -1,10 +1,10 @@
 {
   "version": 1,
   "name": "migrate-web",
-  "last_updated": "2026-08-24T05:33:35Z",
+  "last_updated": "2026-08-24T12:10:32Z",
   "release": {
-    "version": "1.2.0",
-    "url": "https://api.wp.pe/migrate-web/releases/migrate-web-1.2.0.sh",
-    "sha256": "665244bebf1c8270202d45a80a0d29dce755a8463167c95a1cddf329a00ff86b"
+    "version": "1.2.1",
+    "url": "https://api.wp.pe/migrate-web/releases/migrate-web-1.2.1.sh",
+    "sha256": "c1fb5e0a920e1f83a5ff80fb6be9edb657b625be3f260cc1fc17aae8a03c22c9"
   }
 }
