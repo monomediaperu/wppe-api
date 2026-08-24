@@ -43,6 +43,21 @@
 				<td>1 ano</td>
 			</tr>
 			<tr>
+				<td><a href="/migrate-web/latest.json"><code>/migrate-web/latest.json</code></a></td>
+				<td>Manifest con la version latest de <strong>migrate-web</strong> (espejo FTP para migraciones) + URL y SHA256 del script.</td>
+				<td>5 min</td>
+			</tr>
+			<tr>
+				<td><a href="/migrate-web/migrate-web.sh"><code>/migrate-web/migrate-web.sh</code></a></td>
+				<td>Copia estable de la ultima version de <strong>migrate-web</strong>, con su <code>.sha256</code> al lado. Verificar SHA256 antes de ejecutar.</td>
+				<td>5 min</td>
+			</tr>
+			<tr>
+				<td><code>/migrate-web/releases/migrate-web-X.Y.Z.sh</code></td>
+				<td>Releases versionados de <strong>migrate-web</strong>, con <code>.sha256</code>. <span class="tag">immutable</span></td>
+				<td>1 ano</td>
+			</tr>
+			<tr>
 				<td><a href="/status/ping.json"><code>/status/ping.json</code></a></td>
 				<td>Health check publico del servicio.</td>
 				<td>no-cache</td>
